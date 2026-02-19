@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d20"/>
+      <stop offset="100%" stop-color="#0a0a18"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B7CFA"/>
+      <stop offset="100%" stop-color="#8B3EEA"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7090FF"/>
+      <stop offset="100%" stop-color="#A060FF"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+
+  <!-- Glow effect behind letter -->
+  <ellipse cx="16" cy="17" rx="9" ry="8" fill="#5B7CFA" opacity="0.15" filter="url(#blur)"/>
+
+  <!-- Letter A — bold, geometric -->
+  <!-- Left leg -->
+  <path d="M7 26 L13.5 7 L16 7 L9.5 26 Z" fill="url(#accent)"/>
+  <!-- Right leg -->
+  <path d="M25 26 L18.5 7 L16 7 L22.5 26 Z" fill="url(#accent)"/>
+  <!-- Crossbar -->
+  <rect x="10.5" y="17.5" width="11" height="2.8" rx="1.4" fill="url(#glow)"/>
+
+  <!-- Dot accent — top spark -->
+  <circle cx="22" cy="9" r="1.8" fill="#06D6A0" opacity="0.9"/>
+  <circle cx="22" cy="9" r="3" fill="#06D6A0" opacity="0.2"/>
+</svg>
